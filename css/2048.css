@@ -1,0 +1,199 @@
+.panel-2048 {
+  width: 500px;
+  height: 500px;
+  margin: 50px auto;
+  font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif; }
+
+.panel-2048 .game {
+  width: 500px;
+  height: 500px;
+  background: #bbada0;
+  border-radius: 10px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.panel-2048 .board-row {
+  margin-bottom: 15px; }
+.panel-2048 .board-row:after {
+  content: "";
+  clear: both;
+  display: block; }
+.panel-2048 .board-row:first-child {
+  padding-top: 15px; }
+
+.panel-2048 .board-cell {
+  float: left;
+  margin-right: 15px; }
+
+.panel-2048 .board-cell:first-child {
+  margin-left: 15px; }
+
+.panel-2048 .board-cell, .panel-2048 .tile {
+  width: 106px;
+  height: 106px;
+  background: rgba(238, 228, 218, 0.35);
+  border-radius: 5px;
+  color: #776e65;
+  font-size: 55px;
+  font-weight: bold;
+  line-height: 106px;
+  text-align: center; }
+
+.panel-2048 .game {
+  position: relative; }
+
+.panel-2048 .tile-container {
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.panel-2048 .tile {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  -webkit-transition: 70ms ease-in-out;
+  -moz-transition: 70ms ease-in-out;
+  transition: 70ms ease-in-out;
+  -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property: -moz-transform, opacity;
+  transition-property: transform, opacity; }
+
+.hide {
+  opacity: 0 !important; }
+
+/* css of different positions of tile */
+.panel-2048 .tile-position-1-1 {
+  -webkit-transform: translate(0px, 0px);
+  -moz-transform: translate(0px, 0px);
+  transform: translate(0px, 0px); }
+.panel-2048 .tile-position-1-2 {
+  -webkit-transform: translate(121px, 0px);
+  -moz-transform: translate(121px, 0px);
+  transform: translate(121px, 0px); }
+.panel-2048 .tile-position-1-3 {
+  -webkit-transform: translate(242px, 0px);
+  -moz-transform: translate(242px, 0px);
+  transform: translate(242px, 0px); }
+.panel-2048 .tile-position-1-4 {
+  -webkit-transform: translate(363px, 0px);
+  -moz-transform: translate(363px, 0px);
+  transform: translate(363px, 0px); }
+.panel-2048 .tile-position-2-1 {
+  -webkit-transform: translate(0px, 121px);
+  -moz-transform: translate(0px, 121px);
+  transform: translate(0px, 121px); }
+.panel-2048 .tile-position-2-2 {
+  -webkit-transform: translate(121px, 121px);
+  -moz-transform: translate(121px, 121px);
+  transform: translate(121px, 121px); }
+.panel-2048 .tile-position-2-3 {
+  -webkit-transform: translate(242px, 121px);
+  -moz-transform: translate(242px, 121px);
+  transform: translate(242px, 121px); }
+.panel-2048 .tile-position-2-4 {
+  -webkit-transform: translate(363px, 121px);
+  -moz-transform: translate(363px, 121px);
+  transform: translate(363px, 121px); }
+.panel-2048 .tile-position-3-1 {
+  -webkit-transform: translate(0px, 242px);
+  -moz-transform: translate(0px, 242px);
+  transform: translate(0px, 242px); }
+.panel-2048 .tile-position-3-2 {
+  -webkit-transform: translate(121px, 242px);
+  -moz-transform: translate(121px, 242px);
+  transform: translate(121px, 242px); }
+.panel-2048 .tile-position-3-3 {
+  -webkit-transform: translate(242px, 242px);
+  -moz-transform: translate(242px, 242px);
+  transform: translate(242px, 242px); }
+.panel-2048 .tile-position-3-4 {
+  -webkit-transform: translate(363px, 242px);
+  -moz-transform: translate(363px, 242px);
+  transform: translate(363px, 242px); }
+.panel-2048 .tile-position-4-1 {
+  -webkit-transform: translate(0px, 363px);
+  -moz-transform: translate(0px, 363px);
+  transform: translate(0px, 363px); }
+.panel-2048 .tile-position-4-2 {
+  -webkit-transform: translate(121px, 363px);
+  -moz-transform: translate(121px, 363px);
+  transform: translate(121px, 363px); }
+.panel-2048 .tile-position-4-3 {
+  -webkit-transform: translate(242px, 363px);
+  -moz-transform: translate(242px, 363px);
+  transform: translate(242px, 363px); }
+.panel-2048 .tile-position-4-4 {
+  -webkit-transform: translate(363px, 363px);
+  -moz-transform: translate(363px, 363px);
+  transform: translate(363px, 363px); }
+
+/* color and font of different numbers */
+.panel-2048 .tile-2 {
+  background: #eee4da;
+  box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
+.panel-2048 .tile-4 {
+  background: #ede0c8;
+  box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
+.panel-2048 .tile-8 {
+  background: #f2b179;
+  color: #f9f6f2; }
+.panel-2048 .tile-16 {
+  background: #f59563;
+  color: #f9f6f2; }
+.panel-2048 .tile-32 {
+  background: #f67c5f;
+  color: #f9f6f2; }
+.panel-2048 .tile-64 {
+  background: #f65e3b;
+  color: #f9f6f2; }
+.panel-2048 .tile-128 {
+  background: #edcf72;
+  box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.2381), inset 0 0 0 1px rgba(255, 255, 255, 0.14286);
+  color: #f9f6f2;
+  font-size: 45px; }
+@media screen and (max-width: 520px) {
+  .panel-2048 .tile-128 {
+    font-size: 25px; } }
+.panel-2048 .tile-256 {
+  background: #edcc61;
+  box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.31746), inset 0 0 0 1px rgba(255, 255, 255, 0.19048);
+  color: #f9f6f2;
+  font-size: 45px; }
+@media screen and (max-width: 520px) {
+  .panel-2048 .tile-256 {
+    font-size: 25px; } }
+.panel-2048 .tile-512 {
+  background: #edc850;
+  box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.39683), inset 0 0 0 1px rgba(255, 255, 255, 0.2381);
+  color: #f9f6f2;
+  font-size: 45px; }
+@media screen and (max-width: 520px) {
+  .panel-2048 .tile-512 {
+    font-size: 25px; } }
+.panel-2048 .tile-1024 {
+  background: #edc53f;
+  box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.47619), inset 0 0 0 1px rgba(255, 255, 255, 0.28571);
+  color: #f9f6f2;
+  font-size: 35px; }
+@media screen and (max-width: 520px) {
+  .panel-2048 .tile-1024 {
+    font-size: 15px; } }
+.panel-2048 .tile-2048 {
+  background: #edc22e;
+  box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333);
+  color: #f9f6f2;
+  font-size: 35px; }
+@media screen and (max-width: 520px) {
+  .panel-2048 .tile-2048 {
+    font-size: 15px; } }
+.panel-2048 .tile-super {
+  background: #3c3a32;
+  color: #f9f6f2;
+  font-size: 30px; }
+@media screen and (max-width: 520px) {
+  .panel-2048 .tile-super {
+    font-size: 10px; } }

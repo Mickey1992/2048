@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title>2048</title>
+	<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+	<script src="js/tile.js"></script>
+	<script src="js/2048.js"></script>
+	<style type="text/css">
+	.header {
+		margin-bottom: 20px;
+	}
+	</style>
+	<script type="text/javascript">
+	var g2048 = null;
+
+	$(document).ready(function() {
+		g2048 = $("#game2048").game2048();
+	});
+	</script>
+	<link rel="stylesheet" type="text/css" href="css/2048.css" />
+</head>
+<body>
+
+	<div id="game2048"></div>
+	<pre id="info">
+
+	</pre>
+</body>
+</html>
